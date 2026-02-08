@@ -2,8 +2,8 @@ package com.musaic;
 
 import static spark.Spark.*;
 import com.google.gson.Gson;
-import com.musaic.Authentication.AuthRoutes;
-import com.musaic.Authentication.AuthService;
+import com.musaic.AuthRoutes;
+import com.musaic.authentication.AuthService;
 
 
 public class Main {

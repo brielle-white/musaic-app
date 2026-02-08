@@ -1,7 +1,7 @@
-package com.musaic.Authentication;
+package com.musaic;
 
 import com.google.gson.Gson;
-import com.musaic.Authentication.AuthService;
+import com.musaic.authentication.AuthService;
 
 import static spark.Spark.*;
 

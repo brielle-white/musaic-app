@@ -1,4 +1,4 @@
-package com.musaic.Authentication;
+package com.musaic.authentication;
 
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWSAlgorithm;
