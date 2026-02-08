@@ -111,6 +111,8 @@ public class ItunesResponse {
             System.out.printf(" - kind = %s\n", result.kind);
             System.out.printf(" - artworkUrl100 = %s\n", result.artworkUrl100);
         } // for
+        ItunesResponse.printItunesResponse(itunesResponse);
     } // parseItunesResponse
 
+        
 } // ItunesResponse
