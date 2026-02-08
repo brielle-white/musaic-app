@@ -17,4 +17,4 @@ Domain: dev-gm2117rej4tw1lvw.us.auth0.com
 Client ID: CjjkRynKAGoLEl9BvM27wc2GdgWeocWN
 Client Secret: xTJalg2kvee2PtJEqLH34rrnON2gK5UhHMtr94jl9CZoviDWUaeWdXCaxLymPLT9
 
-
+Compile command from terminal: mvn clean compile exec:java -Dexec.mainClass="com.musaic.Main"
