@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="editor" id="editor">
+    <div class="form-grid">
+      <label>Name
+        <input id="nameInput">
+      </label>
+
+      <label>Bio
+        <input id="bioInput">
+      </label>
+
+      <label>Likes
+        <input id="likesInput">
+      </label>
+
+      <label>Dislikes
+        <input id="dislikesInput">
+      </label>
+
+      <label>Emojis
+        <input id="emojiInput" placeholder="🐚 🐟 💧">
+      </label>
+
+      <label class="full">Links (label | url)
+        <textarea id="linksInput"></textarea>
+      </label>
+
+      <label>Banner image
+        <input id="bannerInput" type="file" accept="image/*">
+      </label>
+
+      <label>Avatar image
+        <input id="avatarInput" type="file" accept="image/*">
+      </label>
+    </div>
+
+    <button id="saveBtn">Save</button>
+  </div>
+
+  <div class="outer-card">
+    <div class="card">
+
+      <div class="top">
+        <img id="bannerImg" src="banner.jpg" class="banner-img">
+
+        <div class="pills">
+          <span class="pill">01.</span>
+          <span class="pill">02.</span>
+          <span class="pill">03.</span>
+        </div>
+
+        <div class="avatar-frame">
+          <img id="avatarImg" src="avatar.jpg" class="avatar">
+        </div>
+      </div>
+
+      <div class="mid">
+        <div>
+          <div class="playing">
+            Playing … <b id="songText">Not playing</b><br>
+            by <b id="artistText">Spotify</b>
+          </div>
+
+          <div id="emojiRow" class="emoji-row"></div>
+          <div id="linksBox"></div>
+        </div>
+
+        <div>
+          <div><b id="displayName"></b> 🫧 <span id="bioText"></span></div>
+
+          <div class="likes-spacing">
+            <div class="label-line"><span class="label">Likes:</span> <span id="likesText"></span></div>
+            <div class="label-line"><span class="label">Dislikes:</span> <span id="dislikesText"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="bottom">
+        <div class="music-pill"> Top Artists 🎧</div>
+        <div class="top-artists-title">Top artists</div>
+        <div id="topArtistsBox" class="top-artist"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <button id="editBtn">Edit profile</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
