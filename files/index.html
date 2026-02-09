@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musaic - Social Music Platform</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <svg viewBox="0 0 100 100" width="50" height="50">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#f39c12" stroke-width="2"/>
+                    <path d="M 30 60 Q 30 40 40 35 L 40 75 Q 40 80 35 80 Q 30 80 30 75 Z" fill="#f39c12"/>
+                    <circle cx="42" cy="32" r="5" fill="#f39c12"/>
+                    <path d="M 50 55 Q 50 35 60 30 L 60 70 Q 60 75 55 75 Q 50 75 50 70 Z" fill="#f39c12"/>
+                    <circle cx="62" cy="27" r="5" fill="#f39c12"/>
+                    <path d="M 35 45 L 65 45" stroke="#f39c12" stroke-width="2"/>
+                    <path d="M 35 52 L 65 52" stroke="#f39c12" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+        <nav class="nav">
+            <button class="search-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+            <a href="#friends">Friends</a>
+            <a href="#recommended">Reccomended</a>
+            <div class="profile-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="4" fill="#95a5a6"/>
+                    <path d="M20 20c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6 2.7 6 6 6zm0 3c-4 0-12 2-12 6v3h24v-3c0-4-8-6-12-6z" fill="#2c3e50"/>
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Musaic</h1>
+                <p class="hero-description">
+                    Musaic is a social music platform for logging, rating, and reviewing albums and songs. Users can curate personal listening timelines, build and share themed lists, and discover music through a community feed. It's a personal music diary and collaborative discovery tool.
+                </p>
+                <a href="login.html" class="cta-button">piece your taste!</a>
+            </div>
+            
+            <!-- Decorative mosaic pattern with musical note -->
+            <div class="mosaic-decoration">
+                <svg viewBox="0 0 500 600" class="mosaic-svg">
+                    <!-- Mosaic pattern tiles -->
+                    <defs>
+                        <pattern id="mosaicPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                            <!-- Star flower pattern -->
+                            <path d="M50 20 L55 40 L75 40 L60 52 L65 72 L50 60 L35 72 L40 52 L25 40 L45 40 Z" fill="#d4a574" opacity="0.6"/>
+                            <circle cx="50" cy="50" r="15" fill="none" stroke="#8b6f47" stroke-width="2" opacity="0.4"/>
+                            <path d="M50 10 L52 25 L65 20 L55 32 L65 45 L50 38 L35 45 L45 32 L35 20 L48 25 Z" fill="#c9985f" opacity="0.5"/>
+                        </pattern>
+                    </defs>
+                    
+                    <!-- Mosaic background circles -->
+                    <circle cx="400" cy="150" r="180" fill="url(#mosaicPattern)" opacity="0.8"/>
+                    <circle cx="420" cy="400" r="200" fill="url(#mosaicPattern)" opacity="0.7"/>
+                    
+                    <!-- Musical note character -->
+                    <g class="musical-note">
+                        <!-- Note stem -->
+                        <path d="M 240 180 Q 240 200 245 210 L 245 400" stroke="#f39c12" stroke-width="12" fill="none" stroke-linecap="round"/>
+                        
+                        <!-- Note head (treble clef inspired) -->
+                        <path d="M 240 180 Q 260 170 270 190 Q 280 210 260 230 Q 240 250 230 230 Q 220 210 240 180" fill="#f39c12"/>
+                        
+                        <!-- Inner curl -->
+                        <path d="M 245 195 Q 255 190 258 205 Q 260 220 248 225" fill="#2c3e50" opacity="0.3"/>
+                        
+                        <!-- Bottom note circle -->
+                        <ellipse cx="230" cy="410" rx="35" ry="25" fill="#f39c12"/>
+                        <ellipse cx="230" cy="410" rx="20" ry="12" fill="#2c3e50" opacity="0.2"/>
+                        
+                        <!-- Musical staff lines behind -->
+                        <line x1="180" y1="250" x2="300" y2="250" stroke="#2c3e50" stroke-width="2" opacity="0.3"/>
+                        <line x1="180" y1="270" x2="300" y2="270" stroke="#2c3e50" stroke-width="2" opacity="0.3"/>
+                        <line x1="180" y1="290" x2="300" y2="290" stroke="#2c3e50" stroke-width="2" opacity="0.3"/>
+                    </g>
+                    
+                    <!-- Additional decorative elements -->
+                    <path d="M 320 280 L 325 285 L 330 280 L 335 285 L 340 280" stroke="#8b6f47" stroke-width="3" fill="none" opacity="0.4"/>
+                    <path d="M 200 500 L 205 505 L 210 500 L 215 505 L 220 500" stroke="#8b6f47" stroke-width="3" fill="none" opacity="0.4"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Carousel indicator -->
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+
+        <!-- Feature Cards Section -->
+        <section class="features-section">
+            <div class="feature-card">
+                <h2>Compatibility</h2>
+                <p>Musaic is a social music platform for logging, rating, and reviewing albums and songs. Users can curate personal listening timelines, build and share themed lists, and discover music through a community feed. It's a personal music diary and collaborative discovery tool.</p>
+            </div>
+
+            <div class="feature-card">
+                <h2>Community</h2>
+                <p>Musaic is a social music platform for logging, rating, and reviewing albums and songs. Users can curate personal listening timelines, build and share themed lists, and discover music through a community feed. It's a personal music diary and collaborative discovery tool.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/home.js"></script>
+</body>
+</html>

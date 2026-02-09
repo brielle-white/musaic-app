@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Musaic</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Musaic</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="login-wrapper">
+            <!-- Header over the form -->
+            <div class="form-header">
+                <h1>Musaic</h1>
+                <p>Please login to your account</p>
+            </div>
+            <!-- Login Form -->
+            <div class="login-box">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Username or Email</label>
+                        <input type="text" id="username" placeholder="Enter username or email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password" required>
+                    </div>
+                    <div class="options">
+                        <label class="checkbox">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit">Sign In</button>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="google-btn">
+                            <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google">
+                            Continue with Google
+                        </button>
+                    </div>
+                    <div class="signup-link">
+                        Don't have an account? <a href="#">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Musaic. All rights reserved.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
