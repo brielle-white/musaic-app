@@ -1,42 +1,48 @@
 package com.musaic;
 
 import static spark.Spark.*;
-import com.google.gson.Gson;
-import com.musaic.AuthRoutes;
 import com.musaic.authentication.AuthService;
-
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("[Main] Starting Musaic backend...");
 
-        // This is the starting point to create a port for the server
-       // 1) Port (Spark default is 4567, but making it explicit helps)
-       port(4567);
+        try {
+            System.out.println("[Main] Setting port...");
+            port(4567); // if the server doesn't work on 4567 use 4568 and add PORT=4568 to mvn compile command
 
+            System.out.println("[Main] Registering /health...");
+            get("/health", (req, res) -> {
+                res.type("text/plain");
+                return "ok";
+            });
+            
 
-       // 2) Very basic route to confirm server is alive
-       get("/health", (req, res) -> {
-           res.type("text/plain");
-           return "ok";
-       });
+            String issuer = "https://dev-gm2117rej4tw1lvw.us.auth0.com/";
+            String audience = "https://api.musaic";
+            System.out.println("[Main] Creating AuthService...");
+            AuthService authService = new AuthService(issuer, audience);
 
+            System.out.println("[Main] Calling AuthRoutes.register(...)");
+            AuthRoutes.register(authService);
 
-       // Auth0 config
-       String issuer = "https://dev-gm2117rej4tw1lvw.us.auth0.com/";
-       String audience = "https://api.musaic";
-       AuthService authService = new AuthService(issuer, audience);
+            System.out.println("[Main] init()");
+            init();
 
+            System.out.println("[Main] awaitInitialization()");
+            awaitInitialization();
 
-       // Register routes (and the auth filter) in one place:
-       AuthRoutes.register(authService);
+            System.out.println("[Main] Server running on http://localhost:4567/health");
 
+            // Keep the server alive
+            Thread.currentThread().join();
 
-       init();
-       awaitInitialization();
-
-
-       System.out.println("Server running on http://localhost:4567/health");
-
+        } catch (InterruptedException ie) {
+            System.out.println("[Main] Interrupted; shutting down.");
+        } catch (Throwable t) {
+            System.out.println("[Main] Startup failed:");
+            t.printStackTrace();
+            throw new RuntimeException(t);
+        }
     }
 }
