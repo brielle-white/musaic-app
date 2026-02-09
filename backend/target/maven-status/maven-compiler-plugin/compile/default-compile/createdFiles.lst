@@ -3,6 +3,7 @@ com/musaic/LastFmResult.class
 com/musaic/AuthRoutes$MeResponse.class
 com/musaic/ItunesResponse.class
 com/musaic/LastFmResponse.class
+com/musaic/Db.class
 com/musaic/Main.class
 com/musaic/AuthRoutes.class
 com/musaic/ItunesResult.class
